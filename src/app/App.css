@@ -1,0 +1,138 @@
+/* RESETS AND SETUP */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, button, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a, button {
+    cursor: pointer;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* VARIABLES */
+:root {
+    /* GRADIENTS */
+    --gradient-blue: #6a11cb, #2575fc;
+    --gradient-pink: #b465da, #cf6cc9, #ee609c;
+    --gradient-purple: #5f72bd, #9b23ea;
+    --gradient-violet: #B224EF, #7579FF;
+
+    /* COLORS */
+    --white: #ffffffde;
+    --low-white: #ffffff99;
+    --gray-1: #d9d9d9;
+    --gray-2: #717171;
+    --gray-3: #595959;
+    --gray-4: #353535;
+    --gray-5: #2B2726;
+    --gray-6: #1f1d1d;
+    --black: #090909;
+
+    --green: #94FA7A;
+    --yellow: #F9F373;
+    --orange: #FF8753;
+    --red: #E34D4D;
+
+}
+
+/* STRUCTURE */
+html, body, #root {
+    height: 100%;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    background-color: #000;
+    color: #fff;
+}
+main {
+    flex-grow: 1;
+}
+.container {
+    margin-inline: auto;
+    width: 92%;
+    max-width: 1500px;
+}
+
+/* UTILITY SELECTORS */
+.flex {
+    display: flex;
+}
+.row-reverse {
+    flex-direction: row-reverse;
+}
+.column {
+    flex-direction: column;
+}
+.column-reverse {
+    flex-direction: column-reverse;
+}
+.align-center {
+    align-items: center;
+}
+.align-start {
+    align-items: flex-start;
+}
+.align-end {
+    align-items: flex-end;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.grid {
+    display: grid;
+}
+.center-margin {
+    margin-inline: auto;
+}
