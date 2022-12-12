@@ -1,4 +1,4 @@
-import SearchIcon from '@/assets/img/searchIcon'
+import SearchIcon from '@/assets/img/SearchIcon'
 import './SearchBar.css'
 
 const SearchBar = ({ modifier, label, placeholder }) => {
