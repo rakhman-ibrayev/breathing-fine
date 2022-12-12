@@ -53,15 +53,15 @@ const Nav = () => {
         <>
             <BtnNav isOpen={isOpen} handleClick={() => setIsOpen(prevState => !prevState)} />
             <nav className={`nav ${isOpen ? 'nav--open' : 'nav--closed'}`}>
-                <div className="container grid">
+                <div className="nav__container container grid">
                     <NavSection role="search" heading="поиск">
-                        <div className="nav__search flex column justify-between">
+                        <div className="nav__section-content flex column justify-between">
                             <SearchBar modifier="nav" placeholder="Поиск локации..." />
                             <Ridges />
                         </div>
                     </NavSection>
                     <NavSection role="navigation" heading="меню">
-                        <ul className="nav__links grid">
+                        <ul className="nav__section-content nav__section-content--links grid">
                             {navLinks.map(link =>
                                 <li key={link.id} className="nav__link">
                                     <a href={link.id}>{link.title}</a>
