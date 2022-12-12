@@ -1,3 +1,82 @@
+/* FONTS */
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../assets/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-Regular.woff') format('woff'),
+        url('../assets/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../assets/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-Bold.woff') format('woff'),
+        url('../assets/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+        url('../assets/fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-Light.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-Light.woff') format('woff'),
+        url('../assets/fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../assets/fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-Semibold.woff') format('woff'),
+        url('../assets/fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../assets/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-Medium.woff') format('woff'),
+        url('../assets/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy UltraLight'), local('Gilroy-UltraLight'),
+        url('../assets/fonts/Gilroy-UltraLight.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-UltraLight.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-UltraLight.woff') format('woff'),
+        url('../assets/fonts/Gilroy-UltraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold Italic'), local('Gilroy-SemiboldItalic'),
+        url('../assets/fonts/Gilroy-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/Gilroy-SemiboldItalic.woff2') format('woff2'),
+        url('../assets/fonts/Gilroy-SemiboldItalic.woff') format('woff'),
+        url('../assets/fonts/Gilroy-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
 /* RESETS AND SETUP */
 *,
 *::before,
@@ -24,8 +103,25 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
 a, button {
     cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+}
+input {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    border: none;
+    border-radius: 0;
+}
+input:focus {
+    outline: none;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -46,7 +142,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-img {
+img, svg {
     display: block;
     max-width: 100%;
     height: auto;
@@ -76,7 +172,6 @@ img {
     --yellow: #F9F373;
     --orange: #FF8753;
     --red: #E34D4D;
-
 }
 
 /* STRUCTURE */
@@ -86,12 +181,16 @@ html, body, #root {
 #root {
     display: flex;
     flex-direction: column;
+    font-family: 'Gilroy';
     line-height: 1;
-    background-color: #000;
-    color: #fff;
+    color: var(--white);
+    background-color: var(--black);
 }
 main {
+    min-height: 2000px;
     flex-grow: 1;
+    background-color: var(--black);
+    z-index: 1;
 }
 .container {
     margin-inline: auto;
@@ -129,6 +228,9 @@ main {
 }
 .justify-end {
     justify-content: flex-end;
+}
+.justify-between {
+    justify-content: space-between;
 }
 .grid {
     display: grid;
