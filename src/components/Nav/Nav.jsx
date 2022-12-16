@@ -53,7 +53,7 @@ const Nav = () => {
         <>
             <BtnNav isOpen={isOpen} handleClick={() => setIsOpen(prevState => !prevState)} />
             <nav className={`nav ${isOpen ? 'nav--open' : 'nav--closed'}`}>
-                <div className="nav__container container grid">
+                <div className="nav__container container flex">
                     <NavSection role="search" heading="поиск">
                         <div className="nav__section-content flex column justify-between">
                             <SearchBar modifier="nav" placeholder="Поиск локации..." />
