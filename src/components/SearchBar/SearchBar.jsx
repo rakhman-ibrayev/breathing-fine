@@ -11,17 +11,19 @@ const SearchBar = ({ modifier, label, placeholder }) => {
             <label htmlFor="search">
                 {label}
                 <input
+                    aria-label="введите название локации для поиска индекса качества воздуха AQI в этой локации"
                     type="search"
                     name="search"
                     id="search"
-                    className="search-bar__search"
+                    className="search-bar__input"
                     placeholder={placeholder}
                     maxLength="85"
+                    autoComplete="off"
                 />
             </label>
             <button
                 type="submit"
-                title="Search this website now"
+                title="начать поиск в указанной локации"
                 className={`search-bar__btn${modifier ? ` search-bar__btn--${modifier}` : ''}`}
             >
                 <SearchIcon />

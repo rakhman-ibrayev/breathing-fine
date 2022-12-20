@@ -7,6 +7,7 @@ const BtnNav = ({ isOpen, handleClick }) => {
     return (
         <button
             className={`btn-nav${isOpen ? ' btn-nav--open' : ''}`}
+            alt="кнопка для открытия или закрытия меню навигации по сайту"
             onClick={handleClick}
         >
             <div className="btn-nav__label">
