@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useLocation, NavLink } from 'react-router-dom'
 import SearchBar from '@/components/SearchBar/SearchBar'
 import Ridges from '@/assets/img/Ridges'
 import './Nav.css'
@@ -42,6 +43,7 @@ const NavSection = (props) => {
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const { pathname } = useLocation()
     const navLinks = [
         { title: 'поиск aqi', id: '#main-aqi-search' },
         { title: 'референсы', id: '#references' },
@@ -49,6 +51,10 @@ const Nav = () => {
         { title: 'вред загрязнений', id: '#pollution-harm' },
         { title: 'что такое AQI?', id: '#what-is-aqi' },
     ]
+
+    useEffect(() => {
+        setIsOpen(false)
+    }, [pathname])
 
     return (
         <>
@@ -64,8 +70,14 @@ const Nav = () => {
                     <NavSection role="navigation" heading="меню">
                         <ul className="nav__section-content nav__section-content--links grid">
                             {navLinks.map(link =>
-                                <li key={link.id} className="nav__link">
-                                    <a href={link.id}>{link.title}</a>
+                                <li key={link.id}>
+                                    <NavLink 
+                                        to={`/${link.id}`} 
+                                        className="nav__link"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.title}
+                                    </NavLink>
                                 </li>
                             )}
                         </ul>

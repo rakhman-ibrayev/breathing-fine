@@ -31,15 +31,13 @@ const Earth = ({ widthPercentage }) => {
         }
     }, [])
 
-    console.log('rendered')
-
     return (
         <div className="canvas-animation" ref={parentRef}>
             <Globe
                 ref={globeRef}
                 width={width}
                 height={height}
-                backgroundColor="#000"
+                backgroundColor="#090909"
                 globeImageUrl={earthBG}
 
                 hexPolygonsData={landData.features}

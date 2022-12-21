@@ -4,13 +4,13 @@ const Earth = lazy(() => import('@/components/Earth'))
 const Home = () => {
     return (
         <main>
-            <section className="home-hero">
+            {/* <section className="home-hero">
                 <Suspense>
                     <Earth
                         widthPercentage={100}
                     />
                 </Suspense>
-            </section>
+            </section> */}
         </main>
     )
 }
