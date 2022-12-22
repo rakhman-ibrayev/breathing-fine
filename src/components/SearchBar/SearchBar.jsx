@@ -25,6 +25,7 @@ const SearchBar = ({ modifier, label, placeholder }) => {
     })
 
     const navigateWithParams = (params) => {
+        if (!params.city) return
         navigate({
             pathname: '/search',
             search: `?${getSearchParams(params)}`,
