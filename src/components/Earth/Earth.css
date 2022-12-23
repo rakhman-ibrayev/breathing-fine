@@ -1,0 +1,23 @@
+.earth-tooltip {
+    display: block;
+    font-family: 'Gilroy';
+    color: var(--white);
+    background-color: var(--gray-6);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+}
+.earth-tooltip__title {
+    font-size: 1.125rem;
+    min-width: 200px;
+    margin-bottom: 0.75rem;
+}
+.earth-tooltip__aqi,
+.earth-tooltip__verdict {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+.earth-tooltip__aqi span {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--low-white);
+}
