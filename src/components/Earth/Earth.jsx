@@ -13,7 +13,7 @@ const Earth = ({ mapData, widthPercentage }) => {
 
     useEffect(() => {
         globeRef.current.controls().autoRotate = true
-        globeRef.current.controls().autoRotateSpeed = 0.15
+        globeRef.current.controls().autoRotateSpeed = 0.2
 
         const parent = parentRef.current.parentElement
 
@@ -83,6 +83,7 @@ const Earth = ({ mapData, widthPercentage }) => {
                 pointColor={place => getDataColor(place.aqi)}
                 pointsTransitionDuration={4000}
                 pointLabel={place => getToolTip(place)}
+                onPointHover={place => globeRef.current.controls().autoRotate = !place}
 
                 atmosphereColor="#5f2fed"
                 atmosphereAltitude={0.3}
