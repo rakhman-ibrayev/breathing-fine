@@ -21,7 +21,7 @@
     }
 }
 .btn-nav:active {
-    transform: scale(0.975);
+    transform: scale(0.9);
 }
 .btn-nav--open {
     background-color: #2575fc;
@@ -66,7 +66,7 @@
     position: fixed;
     left: 0; bottom: 0;
     z-index: 2;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: var(--gray-6);
     padding-top: 2rem;
@@ -110,7 +110,7 @@
 
 @media (min-width: 1050px) {
     .nav {
-        height: 50vh;
+        height: 50%;
     }
     .nav__container {
         flex-direction: row-reverse;
