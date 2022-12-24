@@ -12,15 +12,15 @@ const Earth = ({ mapData, widthPercentage }) => {
     const [height, setHeight] = useState(0)
 
     useEffect(() => {
+        globeRef.current.controls().enableZoom = false
         globeRef.current.controls().autoRotate = true
         globeRef.current.controls().autoRotateSpeed = 0.2
-
-        const parent = parentRef.current.parentElement
+        globeRef.current.pointOfView({ lat: 37.6, lng: -16.6, altitude: 2 }, 4000);
 
         const handleWindowResize = () => {
-            const newWidth = parent.offsetWidth / 100 * widthPercentage
-            const newHeight = newWidth * 1.15
-            setWidth(newWidth - 10)
+            const newWidth = parentRef.current.offsetWidth / 100 * widthPercentage
+            const newHeight = newWidth
+            setWidth(newWidth)
             setHeight(newHeight > 700 ? 700 : newHeight)
         }
 
@@ -40,8 +40,10 @@ const Earth = ({ mapData, widthPercentage }) => {
             color = '#38d6beB3'
         else if (aqiLevel <= 100)
             color = '#4c3bd1B3'
-        else
+        else if (aqiLevel <= 200)
             color = '#6e2ea6B3'
+        else
+            color = '#9704c4B3'
 
         return color
     }
@@ -70,6 +72,7 @@ const Earth = ({ mapData, widthPercentage }) => {
                 height={height}
                 backgroundColor="#090909"
                 globeImageUrl={earthBG}
+                animateIn={false}
 
                 hexPolygonsData={landData.features}
                 hexPolygonMargin={0.55}
