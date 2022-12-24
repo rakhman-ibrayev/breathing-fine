@@ -1,17 +1,10 @@
-import { lazy, Suspense } from 'react'
-const Earth = lazy(() => import('@/components/Earth/Earth'))
+import HomeHero from '@/components/HomeHero/HomeHero'
+import './Home.css'
 
 const Home = ({ mapData }) => {
     return (
         <main>
-            <section className="home-hero">
-                <Suspense>
-                    <Earth
-                        mapData={mapData}
-                        widthPercentage={100}
-                    />
-                </Suspense>
-            </section>
+            <HomeHero mapData={mapData} />
         </main>
     )
 }
