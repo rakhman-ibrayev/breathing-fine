@@ -17,8 +17,10 @@ export const getAqiVerdict = (aqiLevel) => {
         verdict = 'средне'
     else if (aqiLevel <= 150)
         verdict = 'умеренно'
-    else
+    else if (aqiLevel <= 200)
         verdict = 'опасно'
+    else
+        verdict = 'очень опасно'
 
     return verdict
 }
