@@ -25,10 +25,14 @@
     max-width: 100px;
     height: 4px;
     margin-right: 1rem;
+    background: -webkit-gradient(linear, left top, right top, from(var(--gradient-purple)));
+    background: -o-linear-gradient(left, var(--gradient-purple));
     background: linear-gradient(90deg, var(--gradient-purple));
 }
 .home-hero__dashed {
     background-color: var(--purple);
+    background-image: -webkit-gradient(linear, right top, left top, from(var(--gradient-purple)));
+    background-image: -o-linear-gradient(right, var(--gradient-purple));
     background-image: linear-gradient(270deg, var(--gradient-purple));
     background-size: 100%;
     background-clip: text;
@@ -43,7 +47,9 @@
     color: var(--low-white);
 }
 .search-bar--home-hero {
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
     width: 100%;
     max-width: 250px;
 }
@@ -52,12 +58,20 @@
     background-color: var(--white);
 }
 .search-bar--home-hero .search-bar__btn {
+    background: -webkit-gradient(linear, left top, right top, from(var(--gradient-pink)));
+    background: -o-linear-gradient(left, var(--gradient-pink));
     background: linear-gradient(90deg, var(--gradient-pink));
     right: 0;
     width: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 @media (min-width: 900px) {
@@ -67,16 +81,25 @@
     }
     .home-hero .container {
         width: 80%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .home-hero .container > * {
         width: 50%;
     }
     .home-hero__content {
         position: static;
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         text-align: start;
         margin: 0;
     }
@@ -86,7 +109,9 @@
         margin-bottom: 0.5rem;
     }
     .search-bar--home-hero {
-        transform: scale(1);
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
     }
 }
 @media (min-width: 1200px) {
