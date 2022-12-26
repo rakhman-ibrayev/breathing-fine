@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation, NavLink } from 'react-router-dom'
 import SearchBar from '@/components/SearchBar/SearchBar'
+import NavLinks from '@/components/NavLinks'
 import Ridges from '@/assets/img/Ridges'
 import './Nav.css'
 
@@ -44,13 +45,6 @@ const NavSection = (props) => {
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
     const { pathname, search, hash } = useLocation()
-    const navLinks = [
-        { title: 'поиск aqi', id: '#main-aqi-search' },
-        { title: 'референсы', id: '#references' },
-        { title: 'худший AQI', id: '#worst-aqi' },
-        { title: 'вред загрязнений', id: '#pollution-harm' },
-        { title: 'что такое AQI?', id: '#what-is-aqi' },
-    ]
 
     useEffect(() => {
         setIsOpen(false)
@@ -62,24 +56,13 @@ const Nav = () => {
             <nav className={`nav ${isOpen ? 'nav--open' : 'nav--closed'}`}>
                 <div className="nav__container container flex">
                     <NavSection role="search" heading="поиск">
-                        <div className="nav__section-content flex column justify-between">
+                        <div className="flex column justify-between">
                             <SearchBar modifier="nav" placeholder="Поиск локации..." />
                             <Ridges />
                         </div>
                     </NavSection>
                     <NavSection role="navigation" heading="меню">
-                        <ul className="nav__section-content nav__section-content--links grid">
-                            {navLinks.map(link =>
-                                <li key={link.id}>
-                                    <NavLink 
-                                        to={`/${link.id}`} 
-                                        className={`nav__link ${hash === link.id ? 'nav__link--active' : ''}`}
-                                    >
-                                        {link.title}
-                                    </NavLink>
-                                </li>
-                            )}
-                        </ul>
+                        <NavLinks block="nav" hash={hash} />
                     </NavSection>
                 </div>
             </nav>
