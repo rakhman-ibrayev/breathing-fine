@@ -4,6 +4,7 @@
 .home-hero .container {
     height: 100%;
     position: relative;
+    overflow: hidden;
 }
 .home-hero__content {
     position: absolute;
@@ -73,7 +74,12 @@
         -ms-flex-pack: center;
             justify-content: center;
 }
-
+@media (min-width: 650px) {
+    .canvas-animation {
+        margin-inline: auto;
+        width: 70%;
+    }
+}
 @media (min-width: 900px) {
     .home-hero {
         height: 92.5%;

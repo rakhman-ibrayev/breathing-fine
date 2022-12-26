@@ -18,10 +18,10 @@ const HomeHero = ({ mapData }) => {
                 <p className="home-hero__heading">
                     Как сильно загрязнён ваш воздух?
                 </p>
-                <p className="home-hero__dashed flex align-center">
+                <h1 className="home-hero__dashed flex align-center">
                     <span aria-hidden="true"></span>
                     Индекс AQI
-                </p>
+                </h1>
                 <p className="home-hero__description">
                     Индекс качества воздуха (AQI) в вашей
                     или ближайшей от вас локации
