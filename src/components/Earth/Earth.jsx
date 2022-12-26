@@ -91,7 +91,7 @@ const Earth = ({ mapData, widthPercentage }) => {
                 onPointHover={place => globeRef.current.controls().autoRotate = !place}
 
                 atmosphereColor="#5f2fed"
-                atmosphereAltitude={0.3}
+                atmosphereAltitude={0.2}
             />
         </div>
     )
