@@ -73,7 +73,7 @@ const Nav = () => {
                                 <li key={link.id}>
                                     <NavLink 
                                         to={`/${link.id}`} 
-                                        className="nav__link"
+                                        className={`nav__link ${hash === link.id ? 'nav__link--active' : ''}`}
                                     >
                                         {link.title}
                                     </NavLink>
