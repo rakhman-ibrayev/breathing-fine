@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { usePlacesWidget } from 'react-google-autocomplete'
 import { getSearchParams } from '@/utils/helpers'
@@ -6,8 +5,6 @@ import SearchIcon from '@/assets/img/SearchIcon'
 import './SearchBar.css'
 
 const SearchBar = ({ modifier, label, placeholder }) => {
-    const [searchInput, setSearchInput] = useState('')
-    const [searchParams, setSearchParams] = useState({ city: '', lat: '', lng: '' })
     const navigate = useNavigate()
     const { ref } = usePlacesWidget({
         apiKey: import.meta.env.VITE_GOOGLE_PLACES_API_KEY,
@@ -20,26 +17,23 @@ const SearchBar = ({ modifier, label, placeholder }) => {
             const lat = place.geometry.location.lat()
             const lng = place.geometry.location.lng()
 
+            ref.current.value = ''
             navigateWithParams({ city, lat, lng })
         }
     })
 
     const navigateWithParams = (params) => {
-        if (!params.city) return
         navigate({
             pathname: '/search',
             search: `?${getSearchParams(params)}`,
         })
-        setSearchInput('')
-    }
-
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        navigateWithParams(searchParams)
     }
 
     return (
-        <form onSubmit={handleSubmit} className={`search-bar${modifier ? ` search-bar--${modifier}` : ''}`}>
+        <form 
+            onSubmit={event => event.preventDefault()}
+            className={`search-bar${modifier ? ` search-bar--${modifier}` : ''}`}
+        >
             <label htmlFor="search">
                 {label}
                 <input
@@ -50,15 +44,6 @@ const SearchBar = ({ modifier, label, placeholder }) => {
                     id="search"
                     className="search-bar__input"
                     placeholder={placeholder}
-                    value={searchInput}
-                    onChange={event => {
-                        setSearchInput(event.target.value)
-                        setSearchParams({
-                            city: event.target.value,
-                            lat: '',
-                            lng: '',
-                        })
-                    }}
                     autoComplete="off"
                     maxLength="85"
                 />
