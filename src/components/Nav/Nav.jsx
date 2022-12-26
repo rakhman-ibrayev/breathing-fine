@@ -43,7 +43,7 @@ const NavSection = (props) => {
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const { pathname } = useLocation()
+    const { pathname, search, hash } = useLocation()
     const navLinks = [
         { title: 'поиск aqi', id: '#main-aqi-search' },
         { title: 'референсы', id: '#references' },
@@ -54,7 +54,7 @@ const Nav = () => {
 
     useEffect(() => {
         setIsOpen(false)
-    }, [pathname])
+    }, [pathname, search, hash])
 
     return (
         <>
@@ -74,7 +74,6 @@ const Nav = () => {
                                     <NavLink 
                                         to={`/${link.id}`} 
                                         className="nav__link"
-                                        onClick={() => setIsOpen(false)}
                                     >
                                         {link.title}
                                     </NavLink>
