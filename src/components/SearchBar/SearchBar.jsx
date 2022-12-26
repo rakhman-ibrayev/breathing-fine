@@ -32,7 +32,7 @@ const SearchBar = ({ modifier, label, placeholder }) => {
     return (
         <form 
             onSubmit={event => event.preventDefault()}
-            className={`search-bar${modifier ? ` search-bar--${modifier}` : ''}`}
+            className={`search-bar ${modifier ? `search-bar--${modifier}` : ''}`}
         >
             <label htmlFor="search">
                 {label}
@@ -51,7 +51,7 @@ const SearchBar = ({ modifier, label, placeholder }) => {
             <button
                 type="submit"
                 title="начать поиск в указанной локации"
-                className={`search-bar__btn${modifier ? ` search-bar__btn--${modifier}` : ''}`}
+                className={`search-bar__btn ${modifier ? `search-bar__btn--${modifier}` : ''}`}
             >
                 <SearchIcon />
             </button>
