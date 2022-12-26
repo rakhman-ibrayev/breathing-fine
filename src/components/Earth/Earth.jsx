@@ -12,10 +12,12 @@ const Earth = ({ mapData, widthPercentage }) => {
     const [height, setHeight] = useState(0)
 
     useEffect(() => {
-        globeRef.current.controls().enableZoom = false
-        globeRef.current.controls().autoRotate = true
-        globeRef.current.controls().autoRotateSpeed = 0.2
-        globeRef.current.pointOfView({ lat: 37.6, lng: -16.6, altitude: 2 }, 4000);
+        if (globeRef.current) {
+            globeRef.current.controls().enableZoom = false
+            globeRef.current.controls().autoRotate = true
+            globeRef.current.controls().autoRotateSpeed = 0.2
+            globeRef.current.pointOfView({ lat: 37.6, lng: -16.6, altitude: 2 }, 4000);
+        }
 
         const handleWindowResize = () => {
             const newWidth = parentRef.current.offsetWidth / 100 * widthPercentage
@@ -82,7 +84,7 @@ const Earth = ({ mapData, widthPercentage }) => {
                 pointLat={place => place.lat}
                 pointLng={place => place.lon}
                 pointRadius={0.6}
-                pointAltitude={place => place.aqi / 2000}
+                pointAltitude={place => place.aqi / 2500}
                 pointColor={place => getDataColor(place.aqi)}
                 pointsTransitionDuration={4000}
                 pointLabel={place => getToolTip(place)}
