@@ -2,6 +2,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { getMapData } from '@/utils/aqiService.js'
 import Nav from '@/components/Nav/Nav'
+import Footer from '@/components/Footer/Footer'
 import './App.css'
 
 const Home = lazy(() => import('@/pages/Home/Home'))
@@ -30,6 +31,7 @@ function App() {
                     <Route path="*" element={<Error/>} />
                 </Routes>
             </Suspense>
+            <Footer />
         </>
     )
 }
