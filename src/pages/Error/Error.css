@@ -1,4 +1,5 @@
 .error-page {
+    height: 80%;
     padding-bottom: 10vh;
 }
 .error-page__oops {
