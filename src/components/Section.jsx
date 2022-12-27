@@ -2,15 +2,15 @@ import { useEffect, useRef } from 'react'
 
 const Section = (props) => {
     const ref = useRef()
+    const hash = window.location.hash
 
     const scrollToComponent = () => {
-        if (window.location.hash === `#${props.id}`) {
-            ref.current.scrollIntoView({ block: 'end', behavior: 'smooth' })
-            ref.current.focus()
+        if (hash === `#${props.id}`) {
+            ref.current.scrollIntoView({ block: 'center', behavior: 'smooth' })
         }
     }
 
-    useEffect(() => scrollToComponent(), [])
+    useEffect(() => scrollToComponent(), [hash])
 
     return (
         <section ref={ref} id={props.id} className={props.className}>
