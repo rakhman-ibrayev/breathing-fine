@@ -122,6 +122,7 @@
 @media (min-width: 1200px) {
     .home-hero__content {
         padding-left: 30px;
+        padding-bottom: 30px;
     }
     .home-hero__heading,
     .home-hero__dashed {
