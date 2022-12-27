@@ -1,0 +1,20 @@
+.shadow-box {
+    position: relative;
+    margin-bottom: 19px;
+}
+.shadow-box > * {
+    width: calc(100% - 13px);
+}
+.shadow-box__content {
+    position: relative;
+    z-index: 2;
+    border: 1px solid var(--white);
+    background-color: var(--black);
+}
+.shadow-box__shadow {
+    position: absolute;
+    bottom: -19px; right: 0;
+    z-index: 1;
+    height: 100%;
+    border: 1px solid var(--gray-3);
+}
