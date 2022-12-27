@@ -1,5 +1,5 @@
 .home-hero {
-    height: 75%;
+    height: 70vh;
 }
 .home-hero .container {
     height: 100%;
@@ -10,7 +10,6 @@
     position: absolute;
     bottom: 0; left: 0; right: 0;
     margin: 0 auto;
-    width: 90%;
     gap: 1rem;
     text-align: center;
 }
@@ -82,7 +81,7 @@
 }
 @media (min-width: 900px) {
     .home-hero {
-        height: 92.5%;
+        height: 92.5vh;
         overflow: hidden;
     }
     .home-hero .container {
