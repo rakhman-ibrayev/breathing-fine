@@ -10,13 +10,13 @@
     height: 45px;
     width: 45px;
     padding: 0.5rem;
+    padding-top: 0.55rem;
 
     font-size: 1.2rem;
     font-weight: 600;
 
     border: 2px solid var(--white);
     border-radius: 100%;
-    padding: 0.5rem;
 }
 @media (min-width: 700px) {
     .intro__small-text {
