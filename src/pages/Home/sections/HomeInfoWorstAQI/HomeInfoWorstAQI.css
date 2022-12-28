@@ -3,8 +3,8 @@
     grid-auto-rows: 1fr;
 }
 .aqi-chart__title {
-    color: var(--gray-3);
-    border: 1px dashed var(--gray-3);
+    color: var(--low-white);
+    border: 1px dashed var(--low-white);
     padding: 0.5rem;
 }
 .aqi-chart__item {
