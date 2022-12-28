@@ -56,7 +56,7 @@ const Nav = () => {
             <nav className={`nav ${isOpen ? 'nav--open' : 'nav--closed'}`}>
                 <div className="nav__container container flex">
                     <NavSection role="search" heading="поиск">
-                        <div className="flex column justify-between">
+                        <div className="flex column">
                             <SearchBar modifier="nav" placeholder="Поиск локации..." />
                             <Ridges />
                         </div>

@@ -4,7 +4,7 @@ import { getSearchParams } from '@/utils/helpers'
 import SearchIcon from '@/assets/img/SearchIcon'
 import './SearchBar.css'
 
-const SearchBar = ({ modifier, label, placeholder }) => {
+const SearchBar = ({ modifier, placeholder }) => {
     const navigate = useNavigate()
     const { ref } = usePlacesWidget({
         apiKey: import.meta.env.VITE_GOOGLE_PLACES_API_KEY,
@@ -30,24 +30,20 @@ const SearchBar = ({ modifier, label, placeholder }) => {
     }
 
     return (
-        <form 
+        <form
             onSubmit={event => event.preventDefault()}
             className={`search-bar ${modifier ? `search-bar--${modifier}` : ''}`}
         >
-            <label htmlFor="search">
-                {label}
-                <input
-                    ref={ref}
-                    aria-label="введите название локации для поиска индекса качества воздуха AQI в этой локации"
-                    type="text"
-                    name="search"
-                    id="search"
-                    className="search-bar__input"
-                    placeholder={placeholder}
-                    autoComplete="off"
-                    maxLength="85"
-                />
-            </label>
+            <input
+                ref={ref}
+                aria-label="введите название локации для поиска индекса качества воздуха AQI в этой локации"
+                type="text"
+                name="search"
+                className="search-bar__input"
+                placeholder={placeholder}
+                autoComplete="off"
+                maxLength="85"
+            />
             <button
                 type="submit"
                 title="начать поиск в указанной локации"

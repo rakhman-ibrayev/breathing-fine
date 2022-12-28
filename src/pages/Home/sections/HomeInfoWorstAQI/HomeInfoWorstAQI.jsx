@@ -4,6 +4,23 @@ import Intro from '@/components/Intro/Intro'
 import ShadowBox from '@/components/ShadowBox/ShadowBox'
 import './HomeInfoWorstAQI.css'
 
+const ChartItem = ({ entry, highestAQI, bgColor }) => {
+    return (
+        <div className={`aqi-chart__item flex align-center`}>
+            <div
+                className="aqi-chart__bar flex align-center"
+                style={{
+                    width: `${100 * entry.aqi / highestAQI}%`,
+                    backgroundColor: bgColor
+                }}
+            >
+                {entry.station.name}
+            </div>
+            <p className="aqi-chart__value">{entry.aqi}</p>
+        </div>
+    )
+}
+
 const Top10Chart = ({ places }) => {
     const highestAQI = places[0] ? places[0].aqi : 500
 
@@ -24,22 +41,16 @@ const Top10Chart = ({ places }) => {
 
     return (
         <div className="aqi-chart grid">
+            <p className="aqi-chart__title flex align-center">
+                Названия станций AQICN с худшими индексами AQI в мире.
+            </p>
             {places.slice(0, 10).map(place =>
-                <div
+                <ChartItem 
                     key={place.uid}
-                    className="aqi-chart__item flex align-center"
-                >
-                    <div
-                        className="aqi-chart__bar flex align-center"
-                        style={{
-                            width: `${90 * place.aqi / highestAQI}%`,
-                            backgroundColor: `var(${getColor(place.aqi)})`,
-                        }}
-                    >
-                        {place.station.name}
-                    </div>
-                    <p className="aqi-chart__value">{place.aqi}</p>
-                </div>
+                    entry={place}
+                    highestAQI={highestAQI}
+                    bgColor={`var(${getColor(place.aqi)})`}
+                />
             )}
         </div>
     )

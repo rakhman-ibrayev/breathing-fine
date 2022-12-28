@@ -2,6 +2,11 @@
     gap: 1.5rem;
     grid-auto-rows: 1fr;
 }
+.aqi-chart__title {
+    color: var(--gray-3);
+    border: 1px dashed var(--gray-3);
+    padding: 0.5rem;
+}
 .aqi-chart__item {
     gap: 1rem;
 }
@@ -11,10 +16,14 @@
     color: var(--black);
     padding: 0.5rem;
 }
+.aqi-chart__value {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
 .home-info-worst-aqi__content {
     gap: 2.5rem;
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
     .aqi-chart__bar {
         font-size: 0.75rem;
     }
