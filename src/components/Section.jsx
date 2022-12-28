@@ -6,7 +6,7 @@ const Section = (props) => {
 
     const scrollToComponent = () => {
         if (hash === `#${props.id}`) {
-            ref.current.scrollIntoView({ block: 'center', behavior: 'smooth' })
+            ref.current.scrollIntoView({ block: 'start', behavior: 'smooth' })
         }
     }
 

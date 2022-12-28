@@ -85,7 +85,6 @@
         overflow: hidden;
     }
     .home-hero .container {
-        width: 80%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -121,7 +120,7 @@
 }
 @media (min-width: 1200px) {
     .home-hero__content {
-        padding-left: 30px;
+        padding-left: 50px;
         padding-bottom: 30px;
     }
     .home-hero__heading,

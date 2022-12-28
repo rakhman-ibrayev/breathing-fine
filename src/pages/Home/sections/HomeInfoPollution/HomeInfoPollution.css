@@ -1,9 +1,7 @@
 .home-info-pollution__content {
-    margin-top: 2.5rem;
     gap: 1.5rem;
 }
 .home-info-pollution__description {
-    font-size: 1.1rem;
     padding: 1rem;
 }
 .home-info-pollution__description h3 {
@@ -30,7 +28,7 @@
     }
     .home-info-pollution__description {
         max-width: 500px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         padding: 2rem;
     }
 }

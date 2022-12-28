@@ -1,0 +1,38 @@
+.aqi-chart {
+    gap: 1.5rem;
+    grid-auto-rows: 1fr;
+}
+.aqi-chart__item {
+    gap: 1rem;
+}
+.aqi-chart__bar {
+    font-weight: 500;
+    height: 100%;
+    color: var(--black);
+    padding: 0.5rem;
+}
+.home-info-worst-aqi__content {
+    gap: 2.5rem;
+}
+@media (max-width: 350px) {
+    .aqi-chart__bar {
+        font-size: 0.75rem;
+    }
+}
+@media (min-width: 850px) {
+    .home-info-worst-aqi__content {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    .home-info-worst-aqi__content > * {
+        width: 47%;
+    }
+    .home-info-worst-aqi__content .shadow-box {
+        position: sticky;
+        top: 2.5rem;
+    }
+    .home-info-worst-aqi__content .home-info-pollution__description {
+        max-width: none;
+        text-align: justify;
+    }
+}
