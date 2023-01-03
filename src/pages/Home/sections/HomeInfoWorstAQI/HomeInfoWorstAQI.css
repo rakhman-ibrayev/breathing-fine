@@ -1,32 +1,5 @@
-.aqi-chart {
-    gap: 1.5rem;
-    grid-auto-rows: 1fr;
-}
-.aqi-chart__title {
-    color: var(--low-white);
-    border: 1px dashed var(--low-white);
-    padding: 0.5rem;
-}
-.aqi-chart__item {
-    gap: 1rem;
-}
-.aqi-chart__bar {
-    font-weight: 500;
-    height: 100%;
-    color: var(--black);
-    padding: 0.5rem;
-}
-.aqi-chart__value {
-    font-weight: 500;
-    font-size: 1.1rem;
-}
 .home-info-worst-aqi__content {
     gap: 2.5rem;
-}
-@media (max-width: 400px) {
-    .aqi-chart__bar {
-        font-size: 0.75rem;
-    }
 }
 @media (min-width: 850px) {
     .home-info-worst-aqi__content {
@@ -44,4 +17,35 @@
         max-width: none;
         text-align: justify;
     }
+}
+
+.aqi-chart {
+    gap: 1.5rem;
+    grid-auto-rows: 1fr;
+}
+.aqi-chart__title {
+    color: var(--low-white);
+    border: 1px dashed var(--low-white);
+    padding: 0.5rem;
+}
+.aqi-chart__item {
+    gap: 1rem;
+}
+.aqi-chart__bar {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--black);
+    padding: 0.75rem;
+    padding-left: 0.5rem;
+    height: 100%;
+    -webkit-transition: opacity 350ms ease;
+    -o-transition: opacity 350ms ease;
+    transition: opacity 350ms ease;
+}
+.aqi-chart__bar:hover {
+    opacity: 0.5;
+}
+.aqi-chart__value {
+    font-weight: 500;
+    font-size: 1.1rem;
 }

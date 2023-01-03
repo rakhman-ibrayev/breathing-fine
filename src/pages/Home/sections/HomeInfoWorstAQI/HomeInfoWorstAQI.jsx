@@ -5,17 +5,24 @@ import ShadowBox from '@/components/ShadowBox/ShadowBox'
 import './HomeInfoWorstAQI.css'
 
 const ChartItem = ({ entry, highestAQI, bgColor }) => {
+    const stationName = useMemo(
+        () => entry.station.name.slice(0, entry.station.name.indexOf(',')),
+        [entry.station.name]
+    )
+
     return (
         <div className={`aqi-chart__item flex align-center`}>
-            <div
+            <a
+                href={`https://aqicn.org/search/#q=${stationName}`} 
+                target="_blank" rel="noreferrer"
                 className="aqi-chart__bar flex align-center"
                 style={{
                     width: `${100 * entry.aqi / highestAQI}%`,
                     backgroundColor: bgColor
                 }}
             >
-                {entry.station.name}
-            </div>
+                {stationName}
+            </a>
             <p className="aqi-chart__value">{entry.aqi}</p>
         </div>
     )
@@ -42,7 +49,7 @@ const Top10Chart = ({ places }) => {
     return (
         <div className="aqi-chart grid">
             <p className="aqi-chart__title flex align-center">
-                Названия станций AQICN с худшими индексами AQI в мире.
+                Ссылки на станции AQICN с худшими индексами AQI в мире.
             </p>
             {places.slice(0, 10).map(place =>
                 <ChartItem 
