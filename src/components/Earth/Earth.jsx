@@ -75,8 +75,10 @@ const Earth = ({ mapData, widthPercentage }) => {
                 backgroundColor="#090909"
                 globeImageUrl={earthBG}
                 animateIn={false}
+                waitForGlobeReady={true}
 
                 hexPolygonsData={landData.features}
+                hexPolygonResolution={3}
                 hexPolygonMargin={0.55}
                 hexPolygonColor={() => '#cc69f0'}
                 hexPolygonCurvatureResolution={1}
