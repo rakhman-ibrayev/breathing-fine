@@ -16,7 +16,7 @@ const Earth = ({ mapData, widthPercentage }) => {
             globeRef.current.controls().enableZoom = false
             globeRef.current.controls().autoRotate = true
             globeRef.current.controls().autoRotateSpeed = 0.2
-            globeRef.current.pointOfView({ lat: 37.6, lng: -16.6, altitude: 2 }, 4000);
+            globeRef.current.pointOfView({ lat: 37.6, lng: -16.6, altitude: 2 }, 4000)
         }
 
         const handleWindowResize = () => {
@@ -79,12 +79,13 @@ const Earth = ({ mapData, widthPercentage }) => {
                 hexPolygonsData={landData.features}
                 hexPolygonMargin={0.55}
                 hexPolygonColor={() => '#cc69f0'}
+                hexPolygonCurvatureResolution={1}
 
                 pointsData={mapData}
-                pointLat={place => place.lat}
-                pointLng={place => place.lon}
+                pointLat={place => { if (place.aqi !== '-') return place.lat }}
+                pointLng={place => { if (place.aqi !== '-') return place.lon }}
                 pointRadius={0.6}
-                pointAltitude={place => place.aqi / 2500}
+                pointAltitude={place => (place.aqi < 275 ? place.aqi : 275) / 2500}
                 pointColor={place => getDataColor(place.aqi)}
                 pointsTransitionDuration={4000}
                 pointLabel={place => getToolTip(place)}
