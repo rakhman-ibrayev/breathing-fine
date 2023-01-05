@@ -1,3 +1,9 @@
+.earth {
+    height: 100%;
+    transform-origin: center;
+    cursor: pointer;
+}
+
 .earth-tooltip {
     display: block;
     font-family: 'Gilroy';
