@@ -1,20 +1,23 @@
 .earth {
-    height: 100%;
+    position: relative;
     transform-origin: center;
     cursor: pointer;
 }
 
 .earth-tooltip {
-    display: block;
+    position: absolute;
+    visibility: hidden;
     font-family: 'Gilroy';
     color: var(--white);
     background-color: var(--gray-6);
     padding: 0.75rem 1rem;
     border-radius: 8px;
+    width: 250px;
+    max-width: 250px;
 }
 .earth-tooltip__title {
     font-size: 1.125rem;
-    min-width: 225px;
+    min-width: 220px;
     margin-bottom: 0.75rem;
 }
 .earth-tooltip__aqi,
