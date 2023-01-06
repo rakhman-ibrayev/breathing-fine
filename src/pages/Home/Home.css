@@ -1,11 +1,14 @@
 .home-page section {
     margin-bottom: 10vh;
 }
+.intro {
+    margin-bottom: 3rem;
+}
 @media (min-width: 750px) {
     .home-page section {
         margin-bottom: 20vh;
     }
-}
-.intro {
-    margin-bottom: 3rem;
+    .intro {
+        margin-bottom: 4rem;
+    }
 }

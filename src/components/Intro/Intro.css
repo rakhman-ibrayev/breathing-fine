@@ -3,7 +3,7 @@
     color: var(--low-white);
 }
 .intro__big-text {
-    font-size: clamp(1.1rem, 3vw + 0.5rem, 1.75rem);
+    font-size: clamp(1.125rem, 3vw + 0.5rem, 2.25rem);
     font-weight: 500;
 }
 .intro__info-sign {
@@ -12,7 +12,7 @@
     padding: 0.5rem;
     padding-top: 0.55rem;
 
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     font-weight: 600;
 
     border: 2px solid var(--white);
@@ -20,11 +20,12 @@
 }
 @media (min-width: 700px) {
     .intro__small-text {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        margin-bottom: 8px;
     }
     .intro__info-sign {
-        height: 50px;
-        width: 50px;
+        height: 55px;
+        width: 55px;
         font-size: 1.4rem;
     }
 }

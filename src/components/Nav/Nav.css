@@ -1,22 +1,22 @@
 .btn-nav {
-    border-radius: 100%;
+    font-size: 0.875rem;
+    color: var(--white);
     width: 65px;
     height: 65px;
-
+    
     background-color: #b465da;
-    -webkit-box-shadow: 0px 5px 15px #0000002e;
-            box-shadow: 0px 5px 15px #0000002e;
-
+    -webkit-box-shadow: 0px 1px 15px var(--gray-4);
+            box-shadow: 0px 1px 15px var(--gray-4);
+    border-radius: 100%;
+    
     position: fixed;
-    left: 0; right: 0; bottom: 5vh;
+    left: 0; right: 0; bottom: 4%;
     margin: 0 auto;
     z-index: 11;
-
+    
     -webkit-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    color: var(--white);
-    font-size: 0.875rem;
 }
 @media (hover: hover) {
     .btn-nav:hover {
@@ -57,12 +57,12 @@
 }
 @media (max-width: 600px) {
     .btn-nav {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         bottom: 3.5vh;
     }
     .curved {
-        height: 54px;
+        height: 48px;
     }
     .btn-nav--open .btn-nav__label {
         bottom: 29px;
@@ -195,7 +195,7 @@
     width: 0.30em;
     height: 0.30em;
     border-radius: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(var(--gradient-pink)));
     background: -o-linear-gradient(left, var(--gradient-pink));
+    background: -webkit-gradient(linear, left top, right top, from(var(--gradient-pink)));
     background: linear-gradient(90deg, var(--gradient-pink));
 }

@@ -11,13 +11,13 @@ const HomeHero = ({ mapData }) => {
             <Suspense>
                 <Earth data={mapData} />
             </Suspense>
-            <div className="home-hero__content flex column justify-center align-center">
+            <div className="home-hero__content flex column justify-center">
                 <p className="home-hero__heading">
                     Как сильно загрязнён ваш воздух?
                 </p>
                 <h1 className="home-hero__dashed flex align-center">
-                    <span aria-hidden="true"></span>
-                    Индекс AQI.
+                    <div aria-hidden="true"></div>
+                    <span>Индекс <b>AQI</b>.</span>
                 </h1>
                 <p className="home-hero__description">
                     Индекс качества воздуха (AQI) в вашей
