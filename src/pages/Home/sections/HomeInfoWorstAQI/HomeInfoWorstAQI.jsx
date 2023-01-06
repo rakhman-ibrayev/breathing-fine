@@ -36,9 +36,9 @@ const Top10Chart = ({ places }) => {
 
         if (aqiLevel <= 50)
             verdict = '--green'
-        else if (aqiLevel <= 100)
+        else if (aqiLevel <= 200)
             verdict = '--yellow'
-        else if (aqiLevel <= 150)
+        else if (aqiLevel <= 250)
             verdict = '--orange'
         else
             verdict = '--red'
@@ -65,7 +65,10 @@ const Top10Chart = ({ places }) => {
 
 const HomeInfoWorstAQI = ({ mapData }) => {
     const sortedPlaces = useMemo(() => {
-        return [...mapData].sort((a, b) => b.aqi - a.aqi)
+        return [...mapData].sort((a, b) => {
+            if (a.aqi === '-' || b.aqi === '-') return
+            return b.aqi - a.aqi
+        })
     }, [mapData])
 
     return (
