@@ -1,17 +1,17 @@
 import { useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
-import globeVertexShader from '@/components/Earth/shaders/globe/vertex'
-import globeFragmentShader from '@/components/Earth/shaders/globe/fragment'
-import globe2 from '@/assets/img/globe2.jpg'
+import globeVertexShader from './shaders/globe/vertex'
+import globeFragmentShader from './shaders/globe/fragment'
+import globeBackground from '@/assets/img/globe2.jpg'
 
 const Globe = ({ radius }) => {
-    const globeTexture = useLoader(TextureLoader, globe2)
+    const globeTexture = useLoader(TextureLoader, globeBackground)
     return (
         <mesh rotation={[0, -Math.PI / 2, 0]}>
             <sphereGeometry args={[radius, 64, 64]} />
             <shaderMaterial
                 receiveShadow
-                attach='material'
+                attach="material"
                 args={[
                     {
                         vertexShader: globeVertexShader,

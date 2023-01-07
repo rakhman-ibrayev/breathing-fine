@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react'
 import { useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import { getAqiColor } from '@/utils/helpers'
@@ -20,9 +19,7 @@ const getDataWidth = (aqiLevel) => {
 }
 
 const PointData = ({ element, radius, setTooltipData, isMouseDown }) => {
-    const pointDataRef = useRef()
     const matcapTexture = useLoader(TextureLoader, pointDataCap)
-
     const properties = {
         height: element.aqi > 350 ? 0.14 : element.aqi / 1500,
         width: getDataWidth(element.aqi),
@@ -60,10 +57,6 @@ const PointData = ({ element, radius, setTooltipData, isMouseDown }) => {
         })
     }
 
-    useEffect(() => {
-        pointDataRef.current.lookAt(0, 0, 0)
-    }, [])
-
     return (
         <mesh
             position={[
@@ -71,7 +64,7 @@ const PointData = ({ element, radius, setTooltipData, isMouseDown }) => {
                 radius * properties.y,
                 radius * properties.z,
             ]}
-            ref={pointDataRef}
+            onUpdate={self => self.lookAt(0, 0, 0)}
             onPointerOver={onPointerEnter}
             onPointerOut={onPointerLeave}
         >
