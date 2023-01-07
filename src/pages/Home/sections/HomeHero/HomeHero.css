@@ -126,7 +126,7 @@
             -ms-flex-align: start;
                 align-items: flex-start;
         text-align: start;
-        margin: 0;
+        margin-left: 0;
         padding-bottom: 15px;
     }
     .home-hero__description {

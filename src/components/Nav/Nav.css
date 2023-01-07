@@ -43,6 +43,7 @@
     position: absolute;
     bottom: 22px;
     font-size: 0.8rem;
+    font-weight: 200;
     height: 60px;
     width: 22px;
     -webkit-transform-origin: bottom center;

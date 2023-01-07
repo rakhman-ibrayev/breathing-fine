@@ -28,6 +28,9 @@
     border: 1px dashed var(--low-white);
     padding: 0.5rem;
 }
+.aqi-chart__title a {
+    text-decoration: underline;
+}
 .aqi-chart__item {
     gap: 1rem;
 }

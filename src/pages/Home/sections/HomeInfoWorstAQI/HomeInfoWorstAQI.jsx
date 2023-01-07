@@ -13,7 +13,8 @@ const ChartItem = ({ entry, highestAQI, bgColor }) => {
     return (
         <div className={`aqi-chart__item flex align-center`}>
             <a
-                href={`https://aqicn.org/search/#q=${stationName}`} 
+                href={`https://aqicn.org/search/#q=${stationName}`}
+                alt={`Ссылка на поиск станции ${stationName} на оф. сайте aqicn`}
                 target="_blank" rel="noreferrer"
                 className="aqi-chart__bar flex align-center"
                 style={{
@@ -48,9 +49,17 @@ const Top10Chart = ({ places }) => {
 
     return (
         <div className="aqi-chart grid">
-            <p className="aqi-chart__title flex align-center">
-                Ссылки на станции AQICN с худшими индексами AQI в мире.
-            </p>
+            <div className="aqi-chart__title flex align-center">
+                <p>
+                    Ссылки на <a
+                        href="https://aqicn.org/sources/"
+                        alt="ссылка на оф. сайт aqicn - источник данных"
+                        target="_blank" rel="noreferrer"
+                    >
+                        мониторы станций AQICN
+                    </a> с худшими индексами AQI в мире.
+                </p>
+            </div>
             {places.slice(0, 10).map(place =>
                 <ChartItem 
                     key={place.uid}

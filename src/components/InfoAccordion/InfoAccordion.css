@@ -1,6 +1,6 @@
 .accordion-item {
     font-weight: 500;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
     border-bottom: 1px solid var(--gray-2);
     overflow: hidden;
 }
@@ -23,9 +23,10 @@
 
 .accordion-item__heading {
     position: relative;
+    text-align: left;
     font-size: 1.125rem;
     margin-left: 2rem;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     overflow: hidden;
 }
 .accordion-item__heading::after {
@@ -83,7 +84,7 @@
 }
 .accordion-item__content > p {
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.5;
     color: var(--low-white);
     padding: 1rem 2rem;
     padding-right: 0;

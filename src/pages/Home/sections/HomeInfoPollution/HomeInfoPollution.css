@@ -34,17 +34,17 @@
 }
 @media (min-width: 1000px) {
     .accordion-item__heading {
-        font-size: 1.6rem;
-        margin-left: 2.25rem;
+        font-size: 1.75rem;
+        margin-left: 2.5rem;
     }
     .accordion-item__heading::after {
-        margin-bottom: 0.3em;
+        margin-bottom: 0.4em;
         height: 3px;
     }
     .accordion-item__btn-trigger {
         font-size: 3rem;
     }
     .accordion-item__content > p {
-        padding-left: 2.25rem;
+        padding-left: 2.5rem;
     }
 }
