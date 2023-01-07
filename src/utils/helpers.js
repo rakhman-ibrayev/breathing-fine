@@ -15,10 +15,12 @@ export const getAqiColor = (aqiLevel) => {
         color = '#00FF83'
     else if (aqiLevel <= 100)
         color = '#5CC1B2'
+    else if (aqiLevel <= 150)
+        color = '#C1AE5C'
     else if (aqiLevel <= 200)
         color = '#B982E1'
     else
-        color = '#B982E1'
+        color = '#AC65E0'
 
     return color
 }
