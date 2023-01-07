@@ -6,7 +6,7 @@ const ShadowBox = (props) => {
             <div className="shadow-box__content">
                 {props.children}
             </div>
-            <div className="shadow-box__shadow" aria-hidden="true"></div>
+            <div className="shadow-box__shadow" aria-hidden="true" />
         </div>
     )
 }

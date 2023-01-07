@@ -1,0 +1,6 @@
+.home-info-references__list {
+    gap: 2rem;
+    margin-left: 1.5rem;
+    list-style-type:disc;
+    font-size: clamp(1.125rem, 3vw + 0.5rem, 2.5rem);
+}

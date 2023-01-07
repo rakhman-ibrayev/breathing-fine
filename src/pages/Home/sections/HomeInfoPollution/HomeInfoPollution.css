@@ -14,13 +14,23 @@
     color: var(--low-white);
 }
 
-@media (min-width: 850px) {
+@media (min-width: 450px) {
+    .accordion-item__heading {
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 550px) {
+    .accordion-item__heading {
+        font-size: 1.75rem;
+    }
+}
+@media (min-width: 700px) {
     .home-info-pollution__content {
         flex-direction: row;
         align-items: flex-start;
     }
     .home-info-pollution__content > * {
-        flex-basis: 45%;
+        flex-basis: 46%;
     }
     .home-info-pollution__content .shadow-box {
         position: sticky;
@@ -29,10 +39,15 @@
     .home-info-pollution__description {
         max-width: 500px;
         font-size: 1.1rem;
-        padding: 2rem;
+    }
+    .accordion-item__heading {
+        font-size: 1.1rem;
     }
 }
 @media (min-width: 1000px) {
+    .home-info-pollution__description {
+        padding: 2rem;
+    }
     .accordion-item__heading {
         font-size: 1.75rem;
         margin-left: 2.5rem;

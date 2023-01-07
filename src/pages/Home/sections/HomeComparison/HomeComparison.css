@@ -1,0 +1,42 @@
+.home-comparison .container {
+    max-width: 1000px;
+}
+.home-comparison__text div {
+    position: relative;
+    width: 95%;
+    top: -20px;
+    padding: 1rem;
+    background-color: #64A46A;
+}
+.home-comparison__description {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-5);
+    line-height: 1.3;
+}
+.home-comparison__article-link {
+    display: block;
+    font-style: italic;
+    text-align: right;
+    margin-top: 1.125rem;
+}
+
+@media (min-width: 600px) {
+    .home-comparison__text div {
+        width: 70%;
+        top: -40px;
+    }
+    .home-comparison__description {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 725px) {
+    .home-comparison__text div {
+        width: 55%;
+        top: -60px;
+    }
+    .home-comparison__slider {
+        width: 90%;
+        max-width: 850px;
+    }
+}

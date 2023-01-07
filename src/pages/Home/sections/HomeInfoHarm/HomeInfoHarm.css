@@ -1,0 +1,100 @@
+.home-info-harm .container {
+    /* max-width: 1200px; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.home-info-harm .intro {
+    margin-bottom: 2rem;
+}
+
+
+.home-info-harm__images {
+    position: relative;
+    height: 200px;
+}
+@media (min-width: 290px) {
+    .home-info-harm__images {
+        height: 240px;
+    }
+}
+@media (min-width: 350px) {
+    .home-info-harm__images {
+        height: 300px;
+    }
+}
+@media (min-width: 440px) {
+    .home-info-harm__images {
+        height: 350px;
+    }
+}
+@media (min-width: 520px) {
+    .home-info-harm__images {
+        height: 450px;
+    }
+}
+.home-info-harm__images > img {
+    position: absolute;
+}
+.home-info-harm__large-image {
+    width: 90%;
+}
+.home-info-harm__medium-image {
+    right: 0; bottom: 0; left: 0;
+    margin: auto;
+    width: 65%;
+}
+.home-info-harm__small-image {
+    top: 0; right: 0; bottom: 0;
+    margin: auto;
+    width: 25%;
+}
+
+
+.home-info-harm__text .shadow-box__content {
+    padding: 1rem;
+}
+.home-info-harm__description {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--low-white);
+    margin-bottom: 1.5rem;
+}
+.home-info-harm__article-link {
+    font-style: italic;
+    display: block;
+    text-align: right;
+}
+
+.home-info-harm__illnesses-heading {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.1;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+.home-info-harm__illnesses {
+    color: var(--low-white);
+    gap: 0.5rem;
+}
+
+@media (min-width: 700px) {
+    .home-info-harm .container {
+        flex-direction: row;
+        align-items: center;
+        gap: 6rem;
+    }
+    .home-info-harm__images {
+        width: 48%;
+    }
+    .home-info-harm__text {
+        width: 52%;
+    }
+    .home-info-harm__text .shadow-box__content {
+        padding: 1.5rem;
+    }
+    .home-info-harm__description {
+        font-size: 1rem;
+    }
+}

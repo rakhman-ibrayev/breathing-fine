@@ -1,14 +1,16 @@
 .intro__small-text {
     font-size: 0.875rem;
     color: var(--low-white);
+    margin-bottom: 7px;
 }
 .intro__big-text {
     font-size: clamp(1.125rem, 3vw + 0.5rem, 2.25rem);
     font-weight: 500;
+    line-height: 1.2;
 }
 .intro__info-sign {
     height: 45px;
-    width: 45px;
+    min-width: 45px;
     padding: 0.5rem;
     padding-top: 0.55rem;
 
@@ -25,7 +27,7 @@
     }
     .intro__info-sign {
         height: 55px;
-        width: 55px;
+        min-width: 55px;
         font-size: 1.4rem;
     }
 }
