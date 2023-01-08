@@ -24,7 +24,7 @@
     grid-auto-rows: 1fr;
 }
 .aqi-chart__title {
-    width: 100%;
+    width: 99%;
     color: var(--low-white);
     border: 1px dashed var(--low-white);
     padding: 0.5rem;

@@ -49,7 +49,7 @@ const Top10Chart = ({ places }) => {
 
     return (
         <div className="aqi-chart grid">
-            <div className="aqi-chart__title flex align-center">
+            <div className="aqi-chart__title flex align-center center-margin">
                 <p>
                     Ссылки на <a
                         href="https://aqicn.org/sources/"
