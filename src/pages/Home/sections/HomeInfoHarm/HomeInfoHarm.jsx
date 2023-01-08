@@ -69,15 +69,6 @@ const HomeInfoHarm = () => {
                         unece.org
                     </a>
                 </ShadowBox>
-                <p className="home-info-harm__illnesses-heading">
-                    Загрязнение воздуха вызывает и усугубляет, 
-                    и другие серьезные заболевания такие как:
-                </p>
-                <ul className="home-info-harm__illnesses flex column">
-                    <li>- Астма</li>
-                    <li>- Болезни сердца</li>
-                    <li>- Болезни легких</li>
-                </ul>
             </div>
         </Section>
     )

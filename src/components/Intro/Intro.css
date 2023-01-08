@@ -4,7 +4,7 @@
     margin-bottom: 7px;
 }
 .intro__big-text {
-    font-size: clamp(1.125rem, 3vw + 0.5rem, 2.25rem);
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
     font-weight: 500;
     line-height: 1.2;
 }
@@ -12,13 +12,18 @@
     height: 45px;
     min-width: 45px;
     padding: 0.5rem;
-    padding-top: 0.55rem;
 
     font-size: 1.125rem;
     font-weight: 600;
 
     border: 2px solid var(--white);
     border-radius: 100%;
+}
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */ 
+    .intro__info-sign {
+        padding-top: 0.625rem;
+    }
 }
 @media (min-width: 700px) {
     .intro__small-text {

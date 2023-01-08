@@ -1,8 +1,8 @@
 .home-info-harm .container {
-    /* max-width: 1200px; */
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 .home-info-harm .intro {
     margin-bottom: 2rem;
@@ -67,18 +67,6 @@
     text-align: right;
 }
 
-.home-info-harm__illnesses-heading {
-    font-size: 1.1rem;
-    font-weight: 500;
-    line-height: 1.1;
-    padding-top: 2rem;
-    margin-bottom: 1rem;
-}
-.home-info-harm__illnesses {
-    color: var(--low-white);
-    gap: 0.5rem;
-}
-
 @media (min-width: 700px) {
     .home-info-harm .container {
         flex-direction: row;
@@ -86,10 +74,10 @@
         gap: 6rem;
     }
     .home-info-harm__images {
-        width: 48%;
+        width: 50%;
     }
     .home-info-harm__text {
-        width: 52%;
+        width: 50%;
     }
     .home-info-harm__text .shadow-box__content {
         padding: 1.5rem;
