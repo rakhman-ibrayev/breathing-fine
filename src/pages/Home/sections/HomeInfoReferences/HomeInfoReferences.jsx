@@ -46,6 +46,7 @@ const HomeInfoReferences = () => {
                             href={ref.link}
                             alt={`ссылка на источник от ${ref.title}`}
                             target="_blank" rel="noreferrer"
+                            className="home-info-references__link"
                         >
                             {ref.title}
                         </a>
