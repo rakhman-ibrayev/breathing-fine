@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { getMapData } from '@/utils/aqiService.js'
+import PageLoader from '@/components/PageLoader/PageLoader'
 import Nav from '@/components/Nav/Nav'
 import Footer from '@/components/Footer/Footer'
 import './App.css'
@@ -22,16 +23,16 @@ function App() {
 
     return (
         <>
-            <Nav />
-            <Suspense>
+            <Suspense fallback={<PageLoader />}>
+                <Nav />
                 <Routes>
                     <Route path="/" element={<Home mapData={mapData} />} />
                     <Route path="/search" element={<Search />} />
-                    <Route path="/error" element={<Error/>} />
-                    <Route path="*" element={<Error/>} />
+                    <Route path="/error" element={<Error />} />
+                    <Route path="*" element={<Error />} />
                 </Routes>
+                <Footer />
             </Suspense>
-            <Footer />
         </>
     )
 }
