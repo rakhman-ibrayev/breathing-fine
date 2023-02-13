@@ -1,6 +1,5 @@
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider'
 import Section from '@/components/Section'
-import ShadowBox from '@/components/ShadowBox/ShadowBox'
 import './HomeComparison.css'
 
 const HomeComparison = () => {
