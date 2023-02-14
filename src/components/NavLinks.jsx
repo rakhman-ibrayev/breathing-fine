@@ -4,6 +4,7 @@ const NavLinks = ({ block, hash }) => {
     const blockClass = block ? block : ''
     const hashId = hash ? hash : ''
     const navLinks = [
+        { title: 'главная', id: '' },
         { title: 'поиск AQI', id: '#main-aqi-search' },
         { title: 'референсы', id: '#references' },
         { title: 'худший AQI', id: '#worst-aqi' },
