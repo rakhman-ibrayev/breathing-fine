@@ -17,8 +17,7 @@ const Home = () => {
 
     useEffect(() => {
         getMapData()
-            .then(res => res.json())
-            .then(resObj => setMapData(resObj.data))
+            .then(resData => setMapData(resData))
             .catch(() => navigate('/error'))
     }, [])
 

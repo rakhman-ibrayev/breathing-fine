@@ -41,3 +41,62 @@ export const getAqiVerdict = (aqiLevel) => {
 
     return verdict
 }
+
+export const getAqiVerdictDetails = (aqiLevel) => {
+    let verdict = ''
+
+    if (aqiLevel <= 50)
+        verdict = 'Качество воздуха удовлетворительное: уровень загрязнений не опасен для здоровья человека.'
+    else if (aqiLevel <= 100)
+        verdict = 'Небольшой риск для людей с повышенной чувствительностью к качеству воздуха.'
+    else if (aqiLevel <= 150)
+        verdict = 'Повышенная опасность для людей чувствительных к качеству воздуха.'
+    else if (aqiLevel <= 200)
+        verdict = 'Риск для всех груп людей и серьезная опасноть для людей чувствительных к качеству воздуха.'
+    else
+        verdict = 'Серьезная опасность для всех груп людей'
+
+    return verdict
+}
+
+export const getWeekDay = (dayNumber) => {
+    let day = ''
+
+    switch (dayNumber) {
+        case 0:
+            day = 'ПН'
+            break
+        case 1:
+            day = 'ВТ'
+            break
+        case 2:
+            day = 'СР'
+            break
+        case 3:
+            day = 'ЧТ'
+            break
+        case 4:
+            day = 'ПТ'
+            break
+        case 5:
+            day = 'СБ'
+            break
+        case 6:
+            day = 'ВС'
+            break
+        default:
+            break
+    }
+
+    return day
+}
+
+export const fetchWrapper = async (url) => {
+    const res = await fetch(url)
+    
+    if (!res.ok) {
+        throw new Error('Error: fetch failed')
+    }
+
+    return await res.json()
+}
