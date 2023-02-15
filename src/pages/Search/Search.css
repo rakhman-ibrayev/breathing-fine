@@ -1,0 +1,262 @@
+.search-page {
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+
+
+
+.city-heading {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.aqi-level-description {
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 320px;
+    margin-top: 2.125rem;
+}
+
+
+
+.aqi-scale {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+.aqi-scale__contents {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    gap: 1rem;
+    width: 87%;
+    height: 87%;
+    background-color: var(--black);
+    border-radius: 100%;
+    margin: auto;
+}
+.aqi-scale__contents > h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--low-white);
+    margin-top: -10px;
+}
+.aqi-scale__contents > h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.aqi-scale__contents > h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+
+.widgets {
+    gap: 0.75rem;
+    max-width: 1000px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+.widget {
+    position: relative;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.location-image {
+    height: 265px;
+}
+.location-image > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+.location-image > figcaption {
+    position: absolute;
+    bottom: 10px; left: 8px;
+    gap: 0.3125rem;
+    font-weight: 300;
+    padding: 0.3125rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--gray-5);
+}
+.location-image > figcaption::before {
+    display: block;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: var(--green);
+    border-radius: 100%;
+}
+.location-image > figcaption > a {
+    text-decoration: underline;
+}
+
+
+
+.chemicals {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 75px;
+    gap: 0.625rem;
+    background-color: var(--gray-5);
+    padding: 0.75rem;
+}
+.chemical {
+    background-color: var(--gray-6);
+    padding: 0.75rem;
+    border-radius: 1rem;
+}
+.chemical__value {
+    font-size: 1.3rem;
+}
+.chemical__name {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--gray-2);
+}
+.chemical__scale {
+    position: relative;
+    width: 4px;
+    height: 100%;
+    background-color: var(--gray-3);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.chemical__scale-value {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+
+.calendar {
+    grid-row: 3 / 3;
+    grid-column: 1 / 4;
+    background-color: var(--white);
+    padding-top: 0.25rem;
+    border-radius: 1rem;
+}
+.calendar__weekday {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #E34D4D;
+}
+.calendar__date {
+    font-size: 3rem;
+    color: var(--black);
+    padding-bottom: 1.5rem;
+    margin: auto 0;
+}
+
+
+.forecast {
+    gap: 1rem;
+    height: 170px;
+    background-color: var(--gray-5);
+    padding: 1rem 0.75rem;
+}
+.forecast__heading {
+    color: var(--low-white);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--low-white);
+}
+.forecast__data {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    gap: 0.5rem;
+}
+.forecast__item {
+    height: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    gap: 0.5rem;
+}
+.forecast__value {
+    font-size: 0.875rem;
+    margin-top: auto;
+}
+.forecast__graphical {
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+
+@media (min-width: 375px) {
+    .aqi-scale {
+        width: 325px;
+        height: 325px;
+    }
+    .aqi-scale__contents > h2 {
+        font-size: 5rem;
+    }
+    .aqi-scale__contents > h3 {
+        font-size: 1.5rem;
+    }
+    .widgets {
+        gap: 1rem;
+    }
+    .chemicals {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .calendar {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+        padding-top: 0.75rem;
+    }
+}
+@media (min-width: 500px) {
+    .chemicals {
+        padding: 1rem;
+        gap: 0.75rem;
+        grid-auto-rows: 90px;
+    }
+    .chemical__value {
+        font-size: 1.75rem;
+    }
+    .forecast {
+        padding: 1rem;
+    }
+    .forecast__data {
+        gap: 0.75rem;
+    }
+}
+@media (min-width: 900px) {
+    .aqi-scale {
+        width: 400px;
+        height: 400px;
+    }
+    .aqi-scale__contents > h1 {
+        font-size: 2.25rem;
+    }
+    .aqi-scale__contents > h2 {
+        font-size: 7rem;
+    }
+    .aqi-scale__contents > h3 {
+        font-size: 2rem;
+    }
+    .widgets {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+        margin-bottom: 4rem;
+    }
+    .location-image {
+        height: 465px;
+        grid-row: 1 / 3;
+    }
+    .forecast {
+        height: 100%;
+    }
+}

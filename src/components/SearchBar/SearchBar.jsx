@@ -8,7 +8,7 @@ const SearchBar = ({ modifier, placeholder }) => {
     const navigate = useNavigate()
     const { ref } = usePlacesWidget({
         apiKey: import.meta.env.VITE_GOOGLE_PLACES_API_KEY,
-        onPlaceSelected: (place) => {
+        onPlaceSelected: place => {
             if (!place || !place.geometry) return
 
             const city = place.address_components
