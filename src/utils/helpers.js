@@ -63,30 +63,30 @@ export const getWeekDay = (dayNumber) => {
     let day = ''
 
     switch (dayNumber) {
-        case 0:
-            day = 'ПН'
-            break
-        case 1:
-            day = 'ВТ'
-            break
-        case 2:
-            day = 'СР'
-            break
-        case 3:
-            day = 'ЧТ'
-            break
-        case 4:
-            day = 'ПТ'
-            break
-        case 5:
-            day = 'СБ'
-            break
-        case 6:
-            day = 'ВС'
-            break
-        default:
-            break
-    }
+      case 0:
+          day = 'ВС'
+          break
+      case 1:
+          day = 'ПН'
+          break
+      case 2:
+          day = 'ВТ'
+          break
+      case 3:
+          day = 'СР'
+          break
+      case 4:
+          day = 'ЧТ'
+          break
+      case 5:
+          day = 'ПТ'
+          break
+      case 6:
+          day = 'СБ'
+          break
+      default:
+          break
+  }
 
     return day
 }
